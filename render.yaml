@@ -1,0 +1,11 @@
+services:
+  - type: static
+    name: deep-researcher-frontend
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://deep-researcher-backend.onrender.com
+      - key: GENERATE_SOURCEMAP
+        value: false
